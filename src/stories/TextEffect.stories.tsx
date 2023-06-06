@@ -13,6 +13,8 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
+    message: '가격할인',
+    // text: ""
     // primary: true,
     // label: 'Button',
   },

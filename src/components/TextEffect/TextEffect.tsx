@@ -1,20 +1,17 @@
 import React from 'react';
+import Sliced from './Sliced';
 import styles from './TextEffect.module.scss';
 
+// https://freefrontend.com/css-text-effects/
+
 interface ITextEffectProps {
-  /**
-   * Prop Description
-   */
   message?: string;
 }
 
-/**
- * Component Description
- */
-function TextEffect(props: ITextEffectProps) {
+function TextEffect({ message }: ITextEffectProps) {
   return (
     <div className={styles.root}>
-      <h1>TextEffect</h1>
+      <Sliced message={message} />
     </div>
   );
 }
