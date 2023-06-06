@@ -13,10 +13,14 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
-    message: '부대찌개',
-    // text: ""
-    // primary: true,
-    // label: 'Button',
+    text: '부대찌개',
+  },
+};
+
+export const Shadow = {
+  args: {
+    text: '부대찌개',
+    shadow: true,
   },
 };
 

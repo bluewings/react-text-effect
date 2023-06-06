@@ -1,17 +1,17 @@
 import React from 'react';
-import Sliced from './Sliced';
+import Stroke from '../Stroke';
 import styles from './TextEffect.module.scss';
 
 // https://freefrontend.com/css-text-effects/
 
 interface ITextEffectProps {
-  message?: string;
+  text?: string;
 }
 
-function TextEffect({ message }: ITextEffectProps) {
+function TextEffect({ text = '', ...rest }: ITextEffectProps) {
   return (
     <div className={styles.root}>
-      <Sliced message={message} />
+      <Stroke text={text} {...rest} />
     </div>
   );
 }
