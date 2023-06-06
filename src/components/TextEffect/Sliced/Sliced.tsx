@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import useTextStyle from '../../../hooks/useTextStyle';
 import styles from './Sliced.module.scss';
 
