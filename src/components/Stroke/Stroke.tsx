@@ -8,6 +8,7 @@ interface IStrokeProps {
   shadow?: boolean;
 }
 
+// see: https://codepen.io/markmead/pen/YjQKeZ
 function Stroke({ text, shadow }: IStrokeProps) {
   const ref = useRef(null);
   const textSize = useTextStyle<HTMLDivElement>(ref, text ?? '');
