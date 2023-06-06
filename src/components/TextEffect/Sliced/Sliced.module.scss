@@ -5,8 +5,47 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TTTtangsbudaejjigaeB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$stroke: #111827;
+$shadow: #db2777;
+
+@mixin stroke-width($property) {
+  -webkit-text-stroke-width: $property;
+  -moz-text-stroke-width: $property;
+}
+
+@mixin stroke-color($property) {
+  -webkit-text-stroke-color: $property;
+  -moz-text-stroke-color: $property;
+}
+
 .container {
-  font-family: 'Cafe24Ssurround';
+  // font-family: 'Cafe24Ssurround';
+  font-family: 'TTTtangsbudaejjigaeB';
+  // font-family: 'GmarketSansMedium';
   white-space: nowrap;
   text-align: center;
+}
+
+.stroke {
+  @include stroke-width(2px);
+  @include stroke-color($stroke);
+  color: transparent;
+}
+
+.shadow {
+  text-shadow: 6px 6px $shadow;
 }

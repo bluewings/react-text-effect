@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import React, { useRef } from 'react';
 import useTextStyle from '../../../hooks/useTextStyle';
 import styles from './Sliced.module.scss';
@@ -13,7 +14,9 @@ function Sliced({ message }: ISlicedProps) {
 
   return (
     <div ref={ref} className={styles.container}>
-      <span style={textSize}>{message}</span>
+      <span className={cx(styles.stroke, styles.shadow)} style={textSize}>
+        {message}
+      </span>
     </div>
   );
 }
