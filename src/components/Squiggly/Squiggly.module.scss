@@ -1,4 +1,94 @@
-.root {
-  background: #F492D0;
-  padding: 10px;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+
+@font-face {
+  font-family: 'EarlyFontDiary';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EarlyFontDiary.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KCC-DodamdodamR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-DodamdodamR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UhBeeMiMi';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeMiMi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// body {
+//   // font-family: 'Amatic SC', sans-serif;
+//   // font-family: 'EarlyFontDiary';
+// }
+.test {
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+  animation: squiggly-anim 0.34s linear infinite;
+  // font-family: 'KCC-DodamdodamR';
+  font-family: 'UhBeeMiMi';
+  font-size: 100px;
+}
+// body {
+//   line-height: 100vh;
+//   background: #111;
+//   color: #fff;
+// }
+.test {
+  // display: inline-block;
+  // vertical-align: middle;
+  // width: 100%;
+  // outline: none;
+  // text-align: center;
+  // line-height: 1;
+}
+// .small {
+//   font-size: 0.5em;
+// }
+// .smaller {
+//   font-size: 0.4em;
+// }
+p {
+  margin: 0;
+}
+@-webkit-keyframes squiggly-anim {
+  0% {
+    filter: url('#squiggly-0');
+  }
+  25% {
+    filter: url('#squiggly-1');
+  }
+  50% {
+    filter: url('#squiggly-2');
+  }
+  75% {
+    filter: url('#squiggly-3');
+  }
+  100% {
+    filter: url('#squiggly-4');
+  }
+}
+@keyframes squiggly-anim {
+  0% {
+    filter: url('#squiggly-0');
+  }
+  25% {
+    filter: url('#squiggly-1');
+  }
+  50% {
+    filter: url('#squiggly-2');
+  }
+  75% {
+    filter: url('#squiggly-3');
+  }
+  100% {
+    filter: url('#squiggly-4');
+  }
+}
+
+.svg {
+  display: none;
 }

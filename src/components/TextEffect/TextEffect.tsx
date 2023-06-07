@@ -1,6 +1,7 @@
 import React from 'react';
 import Milky from '../Milky';
 import SecondShadow from '../SecondShadow';
+import Squiggly from '../Squiggly';
 import Stroke from '../Stroke';
 import styles from './TextEffect.module.scss';
 
@@ -8,8 +9,9 @@ import styles from './TextEffect.module.scss';
 
 type ITextEffectProps =
   | TextEffectPropsType<'milky', typeof Milky>
-  | TextEffectPropsType<'stroke', typeof Stroke>
-  | TextEffectPropsType<'second-shadow', typeof SecondShadow>;
+  | TextEffectPropsType<'second-shadow', typeof SecondShadow>
+  | TextEffectPropsType<'squiggly', typeof Squiggly>
+  | TextEffectPropsType<'stroke', typeof Stroke>;
 
 function TextEffect({ text = '', ...props }: ITextEffectProps) {
   const texts = text
@@ -34,6 +36,9 @@ function TextEffectInner({ text = '', ...props }: ITextEffectProps) {
   } else if (props.type === 'second-shadow') {
     const { type, ...rest } = props;
     return <SecondShadow text={text} {...rest} />;
+  } else if (props.type === 'squiggly') {
+    const { type, ...rest } = props;
+    return <Squiggly text={text} {...rest} />;
   }
   return null;
 }

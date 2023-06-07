@@ -26,7 +26,7 @@ const meta: Meta<typeof TextEffect> = {
   args: {
     type: 'stroke',
     text: '부대찌개',
-    shadow: true,
+    // shadow: true,
     // children: 'BUTTON',
   },
 };
@@ -58,6 +58,21 @@ export const Milky = {
   decorators: [
     (Story: any) => (
       <div style={{ padding: '3rem 2rem 1rem', background: 'linear-gradient(to bottom, #ece4d9 0%, #e9dfd1 100%)' }}>
+        {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const Squiggly = {
+  args: {
+    type: 'squiggly',
+    text: '오늘도 떡볶이',
+  },
+  decorators: [
+    (Story: any) => (
+      <div style={{ padding: '2rem', background: '#000', color: '#fff' }}>
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         <Story />
       </div>
