@@ -3,6 +3,7 @@ import TextEffect from '../components/TextEffect';
 
 const meta: Meta<typeof TextEffect> = {
   title: 'Example/TextEffect',
+  // @ts-ignore
   component: TextEffect,
   tags: ['autodocs'],
   argTypes: {
@@ -54,6 +55,14 @@ export const Milky = {
     text: '아침엔 우유 한잔',
     shadow: true,
   },
+  decorators: [
+    (Story: any) => (
+      <div style={{ padding: '3rem 2rem 1rem', background: 'linear-gradient(to bottom, #ece4d9 0%, #e9dfd1 100%)' }}>
+        {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 // export const Secondary = {

@@ -8,6 +8,19 @@ import styles from './TextEffect.module.scss';
 type ITextEffectProps = TextEffectPropsType<'stroke', typeof Stroke> | TextEffectPropsType<'milky', typeof Milky>;
 
 function TextEffect({ text = '', ...props }: ITextEffectProps) {
+  const texts = text
+    .split('\n')
+    .map((e) => e.trim())
+    .filter(Boolean);
+
+  return texts.length > 0
+    ? texts.map((text, i) => {
+        return <TextEffectInner key={i} text={text} {...props} />;
+      })
+    : null;
+}
+
+function TextEffectInner({ text = '', ...props }: ITextEffectProps) {
   if (props.type === 'stroke') {
     const { type, ...rest } = props;
     return <Stroke text={text} {...rest} />;

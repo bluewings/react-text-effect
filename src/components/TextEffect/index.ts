@@ -1,3 +1,3 @@
-import TextEffect from './TextEffect';
+import TextEffectInner from './TextEffect';
 
-export default TextEffect;
+export default TextEffectInner;
