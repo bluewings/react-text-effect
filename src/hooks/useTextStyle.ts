@@ -8,7 +8,7 @@ function useTextStyle<T extends HTMLElement>(ref: RefObject<T>, text: string) {
 
   const observer = useMemo(
     () =>
-      new (window as any).ResizeObserver((entries) => {
+      new (window as any).ResizeObserver((entries: any) => {
         if (entries[0]) {
           setWidth(entries[0].contentRect.width);
         }
