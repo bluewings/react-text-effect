@@ -1,11 +1,15 @@
 import React from 'react';
 import Milky from '../Milky';
+import SecondShadow from '../SecondShadow';
 import Stroke from '../Stroke';
 import styles from './TextEffect.module.scss';
 
 // https://freefrontend.com/css-text-effects/
 
-type ITextEffectProps = TextEffectPropsType<'stroke', typeof Stroke> | TextEffectPropsType<'milky', typeof Milky>;
+type ITextEffectProps =
+  | TextEffectPropsType<'milky', typeof Milky>
+  | TextEffectPropsType<'stroke', typeof Stroke>
+  | TextEffectPropsType<'second-shadow', typeof SecondShadow>;
 
 function TextEffect({ text = '', ...props }: ITextEffectProps) {
   const texts = text
@@ -27,6 +31,9 @@ function TextEffectInner({ text = '', ...props }: ITextEffectProps) {
   } else if (props.type === 'milky') {
     const { type, ...rest } = props;
     return <Milky text={text} {...rest} />;
+  } else if (props.type === 'second-shadow') {
+    const { type, ...rest } = props;
+    return <SecondShadow text={text} {...rest} />;
   }
   return null;
 }

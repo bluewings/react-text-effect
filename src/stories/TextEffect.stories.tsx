@@ -65,6 +65,22 @@ export const Milky = {
   ],
 };
 
+export const SecondShadow = {
+  args: {
+    type: 'second-shadow',
+    text: '지금 시작',
+    shadow: true,
+  },
+  decorators: [
+    (Story: any) => (
+      <div style={{ padding: '2rem' }}>
+        {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 // export const Secondary = {
 //   args: {
 //     label: 'Button',
