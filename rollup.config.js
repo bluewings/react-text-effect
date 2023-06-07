@@ -5,11 +5,11 @@ import typescript from 'rollup-plugin-typescript2';
 
 const pkg = require('./package.json');
 
-const external = Object.keys(pkg?.dependencies || {});
+// const external = Object.keys(pkg?.dependencies || {});
 
 const rollupConfig = {
   input: './src/module.ts',
-  external,
+  external: (id) => !id.startsWith('.') && !id.startsWith('/'),
   plugins: [typescript(), postcss(), commonjs(), nodeResolve()],
 };
 

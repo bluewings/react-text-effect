@@ -1,6 +1,6 @@
 {
   "name": "react-text-fx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "author": {
     "name": "Sung Won Cha",
@@ -22,9 +22,11 @@
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "classnames": "^2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-use": "^17.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "scripts": {
     "dev": "vite",
