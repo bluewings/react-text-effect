@@ -1,4 +1,58 @@
-.root {
-  background: #2F7238;
-  padding: 10px;
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTTtangsbudaejjigaeB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$stroke: #111827;
+$shadow: #db2777;
+
+@mixin stroke-width($property) {
+  -webkit-text-stroke-width: $property;
+  -moz-text-stroke-width: $property;
+}
+
+@mixin stroke-color($property) {
+  -webkit-text-stroke-color: $property;
+  -moz-text-stroke-color: $property;
+}
+
+.container {
+  font-family: 'TTTtangsbudaejjigaeB';
+  white-space: nowrap;
+  text-align: center;
+}
+
+.milky {
+  // font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  // text-transform: uppercase;
+  // display: block;
+  // font-size: 92px;
+  color: #f1ebe5;
+  text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+  font-weight: bold;
+  // letter-spacing: -4px;
+  // text-align: center;
+  background: linear-gradient(to bottom, #ece4d9 0%, #e9dfd1 100%);
+  // position: absolute;
+  padding: 2rem;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // border-radius: 20px;
 }
