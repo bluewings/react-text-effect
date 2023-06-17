@@ -10,7 +10,27 @@ const pkg = require('./package.json');
 const rollupConfig = {
   input: './src/module.ts',
   external: (id) => !id.startsWith('.') && !id.startsWith('/'),
-  plugins: [typescript(), postcss(), commonjs(), nodeResolve()],
+  plugins: [
+    typescript({
+      // https://github.com/ezolenko/rollup-plugin-typescript2
+      // clean: true,
+      // // objectHashIgnoreUnknownHack: true,
+      // useTsconfigDeclarationDir: true,
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: 'dist',
+          // allowJs: false,
+          // isolatedModules: false,
+        },
+        // include: [entry],
+      },
+    }),
+
+    postcss(),
+    commonjs(),
+    nodeResolve(),
+  ],
 };
 
 const cjs = {
