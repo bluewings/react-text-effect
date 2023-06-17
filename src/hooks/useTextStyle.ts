@@ -3,7 +3,13 @@ import { RefObject, useLayoutEffect, useMemo, useState } from 'react';
 const MIN_FONT_SIZE = 16;
 const MAX_FONT_SIZE = 16 * 15;
 
-function useTextStyle<T extends HTMLElement>(ref: RefObject<T>, text: string) {
+function useTextStyle<T extends HTMLElement>(
+  ref: RefObject<T>,
+  text: string,
+  options?: {
+    maxFontSize?: number;
+  },
+) {
   const [containerWidth, setWidth] = useState(0);
 
   const observer = useMemo(
@@ -25,6 +31,8 @@ function useTextStyle<T extends HTMLElement>(ref: RefObject<T>, text: string) {
 
   const [style, setStyle] = useState({ fontSize: 0, width: 0, height: 0 });
 
+  const maxFontSize = options?.maxFontSize ?? 1024;
+
   useLayoutEffect(() => {
     if (ref.current && containerWidth > 0) {
       const container = ref.current;
@@ -36,20 +44,25 @@ function useTextStyle<T extends HTMLElement>(ref: RefObject<T>, text: string) {
       container.appendChild(inspector);
       document.fonts.ready.then(() => {
         let fontSize = MAX_FONT_SIZE;
-        while (MIN_FONT_SIZE < fontSize) {
-          inspector.style.fontSize = `${~~fontSize}px`;
-          const rect = inspector.getBoundingClientRect();
-          if (rect.width <= containerWidth) {
-            break;
-          }
-          fontSize = fontSize * 0.9;
-        }
+        // while (MIN_FONT_SIZE < fontSize) {
+        inspector.style.fontSize = `${~~fontSize}px`;
+        const rect = inspector.getBoundingClientRect();
+        // if (rect.width <= containerWidth) {
+        //   break;
+        // }
+        // fontSize = fontSize * 0.9;
+        fontSize = Math.min(~~((fontSize * containerWidth) / rect.width), maxFontSize);
+
+        console.log(fontSize);
+        inspector.style.fontSize = `${fontSize}px`;
+        // }
         const { width, height } = inspector.getBoundingClientRect();
-        setStyle({ fontSize: parseInt(window.getComputedStyle(inspector).fontSize), width, height });
+        // setStyle({ fontSize: parseInt(window.getComputedStyle(inspector).fontSize), width, height });
+        setStyle({ fontSize, width, height });
         container.removeChild(inspector);
       });
     }
-  }, [ref, text, containerWidth]);
+  }, [ref, text, containerWidth, maxFontSize]);
 
   return style;
 }

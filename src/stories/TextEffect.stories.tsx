@@ -39,6 +39,7 @@ export const Primary = {
   args: {
     text: '부대찌개',
     shadow: false,
+    maxFontSize: 200,
   },
 };
 

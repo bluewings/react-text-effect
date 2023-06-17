@@ -2,20 +2,15 @@
 const config = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   staticDirs: ['../public'],
-  addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/preset-scss',
-  ],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/preset-scss', '@storybook/addon-mdx-gfm'],
   framework: {
     name: '@storybook/react-webpack5',
     options: {
-      fastRefresh: true,
-    },
+      fastRefresh: true
+    }
   },
   docs: {
-    autodocs: 'tag',
-  },
+    autodocs: 'tag'
+  }
 };
 export default config;

@@ -48,4 +48,6 @@ export default TextEffect;
 type TextEffectPropsType<K extends string, T extends (...args: any) => any> = Omit<Parameters<T>[0], 'text'> & {
   type: K;
   text?: string;
+  fontSize?: number;
+  maxFontSize?: number;
 };

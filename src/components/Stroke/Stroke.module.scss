@@ -1,23 +1,23 @@
-@font-face {
-  font-family: 'Cafe24Ssurround';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'Cafe24Ssurround';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'TTTtangsbudaejjigaeB';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'TTTtangsbudaejjigaeB';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+//   font-weight: 700;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'GmarketSansMedium';
+//   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 $stroke: #111827;
 $shadow: #db2777;
@@ -33,9 +33,6 @@ $shadow: #db2777;
 }
 
 .container {
-  // font-family: 'Cafe24Ssurround';
-  font-family: 'TTTtangsbudaejjigaeB';
-  // font-family: 'GmarketSansMedium';
   white-space: nowrap;
   text-align: center;
 }
