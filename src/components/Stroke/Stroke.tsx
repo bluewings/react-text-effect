@@ -27,10 +27,17 @@ function Stroke({ text, maxFontSize, shadow, fillColor, shadowColor = DEFAULT_SH
 
   const a = useMemo(() => {
     const shadowOffset = fontSize / 30;
+    const strokeWidth = fontSize / 90;
+
+    // @include stroke-width(2px);
 
     return css`
       .${styles.shadow} {
         text-shadow: ${shadowOffset}px ${shadowOffset}px ${shadowColor};
+      }
+      .${styles.stroke} {
+        -webkit-text-stroke-width: ${strokeWidth}px;
+        -moz-text-stroke-width: ${strokeWidth}px;
       }
       ${fillColor
         ? `.${styles.stroke} {

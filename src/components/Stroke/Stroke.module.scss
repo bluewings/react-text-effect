@@ -38,7 +38,7 @@ $shadow: #db2777;
 }
 
 .stroke {
-  @include stroke-width(2px);
+  // @include stroke-width(2px);
   @include stroke-color($stroke);
   color: transparent;
 }

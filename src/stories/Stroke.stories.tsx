@@ -87,7 +87,7 @@ export const MaxFontSize = {
 export const ShadowColor = {
   args: {
     shadow: true,
-    shadowColor: 'blue',
+    shadowColor: '#e95785',
   },
 };
 
