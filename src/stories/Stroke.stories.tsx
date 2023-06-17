@@ -6,19 +6,28 @@ import Stroke from '../components/Stroke';
 import styles from './Stroke.stories.module.scss';
 
 const fonts = [
-  { name: '땅스부대찌개', fontFamily: 'TTTtangsbudaejjigaeB' },
   { name: '가나초콜릿체', fontFamily: 'ghanachoco' },
-  { name: '카페24 아네모네', fontFamily: 'Cafe24Ohsquare' },
+  { name: '김정철명조', fontFamily: 'KimjungchulMyungjo-Bold' },
+  { name: '넥슨 배찌체', fontFamily: 'Bazzi' },
+  { name: '더잠실체', fontFamily: 'TheJamsil5Bold' },
+  { name: '독립기념관체', fontFamily: 'Independence_hall' },
+  { name: '땅스부대찌개', fontFamily: 'TTTtangsbudaejjigaeB' },
+  { name: '마포애민', fontFamily: 'MapoAgape' },
+  { name: '밀양영남루체', fontFamily: 'MYYeongnamnu' },
+  { name: '빙그레 싸만코체', fontFamily: 'BinggraeSamanco-Bold' },
+  { name: '수성혜정체', fontFamily: 'SuseongHyejeong' },
+  { name: '여기어때 잘난체', fontFamily: 'yg-jalnan' },
+  { name: '영양군 음식디미방체', fontFamily: 'dimibang_new' },
+  { name: '완도희망체', fontFamily: 'WandohopeR' },
+  { name: '정선아리랑혼체', fontFamily: 'JSArirangHON-Regular' },
   { name: '카페24 단정해', fontFamily: 'Cafe24Danjunghae' },
   { name: '카페24 당당해', fontFamily: 'Cafe24Dangdanghae' },
   { name: '카페24 써라운드', fontFamily: 'Cafe24Ssurround' },
+  { name: '카페24 아네모네', fontFamily: 'Cafe24Ohsquare' },
   { name: '카페24 클래식타입', fontFamily: 'Cafe24ClassicType-Regular' },
-  { name: '더잠실체', fontFamily: 'TheJamsil5Bold' },
-  { name: 'Gmarket Sans', fontFamily: 'GmarketSansMedium' },
-  { name: '밀양영남루체', fontFamily: 'MYYeongnamnu' },
-  { name: '마포애민', fontFamily: 'MapoAgape' },
-  { name: '독립기념관체', fontFamily: 'Independence_hall' },
   { name: '쿠키런', fontFamily: 'CookieRun-Regular' },
+  { name: 'Gmarket Sans', fontFamily: 'GmarketSansMedium' },
+  { name: 'KCC무럭무럭체', fontFamily: 'KCCMurukmuruk' },
 ];
 
 const fontFamilies = (Story: React.FC) => {

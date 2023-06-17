@@ -14,7 +14,7 @@ interface IStrokeProps {
 
 // console.log(css);
 
-const DEFAULT_SHADOW_COLOR = '#db2777;';
+const DEFAULT_SHADOW_COLOR = '#5fc6fa';
 
 // see: https://codepen.io/markmead/pen/YjQKeZ
 function Stroke({ text, maxFontSize, shadow, fillColor, shadowColor = DEFAULT_SHADOW_COLOR }: IStrokeProps) {
